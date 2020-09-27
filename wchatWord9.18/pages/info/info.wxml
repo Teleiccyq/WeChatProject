@@ -1,0 +1,30 @@
+<view open-type="switchTab">
+  <swiper indicator-dots="true">
+    <block wx:for="{{imgurl}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <view class="page__bd">
+		<view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">公司产品</view>
+      <block wx:for="{{infomation}}" wx:key="*this">
+      <view class="weui-panel__bd" bindtap="infoPage">
+				<view class="weui-media-box weui-media-box_appmsg">
+					<view class="weui-media-box__hd">
+						<image class="weui-media-box__thumb" src="{{item.icon}}"></image>
+					</view>
+					<view class="weui-media-box__bd">
+						<h4 class="weui-media-box__title">{{item.title}}</h4>
+						<view class="weui-media-box__desc">{{item.content}}</view>
+					</view>
+        </view>
+      </view>
+    </block>
+		</view>
+  </view>
+    
+  
+		

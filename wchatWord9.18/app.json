@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/info/info",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/content/content"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中山市利红化纤机械有限公司",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/info/info",
+        "text": "首页",
+        "iconPath": "/pages/img/home.png",
+        "selectedIconPath": "pages/img/home_act.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "联系我们",
+        "iconPath": "pages/img/lianxi.png",
+        "selectedIconPath": "pages/img/lianxi_act.png"
+      }
+    ],
+    "backgroundColor": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
