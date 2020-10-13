@@ -1,32 +1,11 @@
-// pages/form/form.js
+// pages/info/info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time:"",
-    dizhi:"",
-  },
-  bindDateChange : function (e) {
-    this.setData({
-      time:e.detail.value
-    })
-  },
-  bindRegionChange : function (e) {
-    console.log(e);
-    this.setData({
-      dizhi:e.detail.value
-    })
-  },
-  formChange:function (e) {
-    console.log("获取的值",e);
-    this.setData({
-      username:e.detail.value.username
-    })
-    wx.navigateTo({
-      url: '../info/info',
-    })
+
   },
 
   /**

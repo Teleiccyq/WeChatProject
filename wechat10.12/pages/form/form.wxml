@@ -1,10 +1,11 @@
+<form bindsubmit="formChange">
 <view class="weui-form__control-area">
 	<view class="weui-cells__group weui-cells__group_form">
 		<view class="weui-cells weui-cells_form">
 			<view class="weui-cell weui-cell_active">
-				<view class="weui-cell__hd"><label class="weui-label">姓名</label></view>
+				<view class="weui-cell__hd"><label class="weui-label" name="asd">姓名</label></view>
 				<view class="weui-cell__bd">
-					<input class="weui-input" placeholder-class="weui-input__placeholder" />
+					<input name="username" class="weui-input" placeholder-class="weui-input__placeholder" />
 				</view>
 			</view>
 			<view class="weui-cell weui-cell_active">
@@ -12,11 +13,11 @@
 					<label class="weui-label">昵称性别</label>
 				</view>
 				<view class="weui-cell__bd">
-					<radio-group class="radio-group" bindchange="radioChange">
-						<radio class="radio">
+					<radio-group name="sex" class="radio-group" bindchange="radioChange">
+						<radio class="radio" value="男">
 							<text>男</text>
 						</radio>
-						<radio class="radio">
+						<radio class="radio" value="女">
 							<text>女</text>
 						</radio>
 					</radio-group>
@@ -29,7 +30,7 @@
 				<view class="weui-cell__bd">
 					<view class="section section_gap">
 						<view class="body-view">
-							<slider bindchange="slider4change" min="0" max="90" show-value />
+							<slider name="age" bindchange="slider4change" min="0" max="90" show-value />
 						</view>
 					</view>
 				</view>
@@ -37,19 +38,19 @@
 			<view class="weui-cell weui-cell_active">
 				<view class="weui-cell__hd"><label class="weui-label">兴趣爱好</label></view>
 				<view class="group">
-					<checkbox-group>
-						<checkbox>
+					<checkbox-group name="hobby">
+						<checkbox value="篮球">
 							<text>篮球</text>
 						</checkbox>
-						<checkbox>
+						<checkbox value="插花">
 							<text>插花</text>
 						</checkbox>
 					</checkbox-group>
-					<checkbox-group>
-						<checkbox>
+					<checkbox-group name="hobby">
+						<checkbox value="动漫">
 							<text>动漫</text>
 						</checkbox>
-						<checkbox>
+						<checkbox value="游泳">
 							<text>游泳</text>
 						</checkbox>
 					</checkbox-group>
@@ -58,25 +59,25 @@
 			<view class="weui-cell weui-cell_active">
 				<view class="weui-cell__hd"><label class="weui-label">联系电话</label></view>
 				<view class="weui-cell__bd">
-					<input class="weui-input" placeholder-class="weui-input__placeholder" />
+					<input name="phoneNum" class="weui-input" placeholder-class="weui-input__placeholder" />
 				</view>
 			</view>
 			<view class="weui-cell weui-cell_active">
 				<view class="weui-cell__hd"><label class="weui-label">出生年月</label></view>
 				<view class="weui-cell__bd">
-					<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+					<picker name="years" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
 						<view class="picker">
 							<view wx:if="{{time.length ==0 }}">点击选择日期</view>
-							<view wx:elif="{{length != 0}}">{{time}}</view>
+							<view wx:elif="{{time.length != 0}}">{{time}}</view>
 						</view>
 					</picker>
 				</view>
 			</view>
 			<view class="weui-cell weui-cell_active">
-				<view class="weui-cell__hd"><label class="weui-label">家庭住址</label></view>
+				<view class="weui-cell__hd"><label class="weui-label" name="localtion">家庭住址</label></view>
 				<view class="weui-cell__bd">
 					<view class="section">
-						<picker mode="region" bindchange="bindRegionChange">
+						<picker name="localtion" mode="region" bindchange="bindRegionChange">
 							<view class="picker">
 								<view wx:if="{{dizhi.length ==0 }}">点击选择地址</view>
 								<view wx:elif="{{dizhi != 0}}">{{dizhi[0]}} {{dizhi[1]}} {{dizhi[2]}}</view>
@@ -89,7 +90,7 @@
 				<view class="weui-cell__hd"><label class="weui-label">自我介绍</label></view>
 				<view class="page-section">
 					<view class="textarea-wrp">
-						<textarea auto-focus="true" style="height: 3em" placeholder="请输入" />
+						<textarea name="introduce" auto-focus="true" style="height: 3em" placeholder="请输入" />
 						</view>
   			</view>
 			</view>
@@ -97,7 +98,7 @@
 				<view class="weui-cell__hd"><label class="weui-label">请同意</label></view>
 				<view class="section section_gap">
             <view class="body-view">
-                <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+                <switch name="agree" checked="{{switch1Checked}}" bindchange="switch1Change"/>
             </view>
         </view>
 			</view>
@@ -105,5 +106,9 @@
 	</view>
 </view>
 <view class="weui-form__opr-area">
-	<view class="weui-btn weui-btn_primary">确定</view>
+	<button class="weui-btn weui-btn_primary" form-type="submit">确定</button>
 </view>
+<view class="weui-form__opr-area">
+	<button class="weui-btn weui-btn_danger" form-type="reset">重置</button>
+</view>
+</form>
