@@ -5,15 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    items: [{
-        name: '1',
-        value: '篮球'
-      },
-      {
-        name: '2',
-        value: '插花'
-      },
-    ],
+    time:"",
+    dizhi:"",
+  },
+  bindDateChange : function (e) {
+    console.log(e);
+    this.setData({
+      time:e.detail.value
+    })
+  },
+  bindRegionChange : function (e) {
+    console.log(e);
+    this.setData({
+      dizhi:e.detail.value
+    })
   },
 
   /**
