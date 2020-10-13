@@ -22,7 +22,10 @@ Page({
   formChange:function (e) {
     console.log("获取的值",e);
     this.setData({
-      username:e.detail.value.username
+      username:e.detail.value.username,
+      sex:e.detail.value.sex,
+      age:e.detail.value.age,
+      hobby:e.detail.value.hobby,
     })
     wx.navigateTo({
       url: '../info/info',

@@ -10,7 +10,7 @@
 			</view>
 			<view class="weui-cell weui-cell_active">
 				<view class="weui-cell__hd">
-					<label class="weui-label">昵称性别</label>
+					<label class="weui-label">性别</label>
 				</view>
 				<view class="weui-cell__bd">
 					<radio-group name="sex" class="radio-group" bindchange="radioChange">
@@ -45,8 +45,8 @@
 						<checkbox value="插花">
 							<text>插花</text>
 						</checkbox>
-					</checkbox-group>
-					<checkbox-group name="hobby">
+					<!-- </checkbox-group> -->
+					<!-- <checkbox-group> -->
 						<checkbox value="动漫">
 							<text>动漫</text>
 						</checkbox>
@@ -109,6 +109,6 @@
 	<button class="weui-btn weui-btn_primary" form-type="submit">确定</button>
 </view>
 <view class="weui-form__opr-area">
-	<button class="weui-btn weui-btn_danger" form-type="reset">重置</button>
+	<button class="weui-btn weui-btn_primary" form-type="reset">重置</button>
 </view>
 </form>
