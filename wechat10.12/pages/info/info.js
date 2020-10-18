@@ -1,3 +1,4 @@
+var app = getApp();
 // pages/info/info.js
 Page({
 
@@ -5,13 +6,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    username: "",
+    sex: "",
+    age: "",
+    hobby: "",
+    phoneNum: "",
+    years: "",
+    localtion: "",
+    introduce: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      this.setData({
+        username:app.globalData.username,
+        sex:app.globalData.sex,
+        age:app.globalData.age,
+        hobby:app.globalData.hobby,
+        phoneNum:app.globalData.phoneNum,
+        years:app.globalData.years,
+        localtion:app.globalData.localtion,
+        introduce:app.globalData.introduce,
+      })
 
   },
 
@@ -62,5 +80,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
 })

@@ -1,16 +1,15 @@
 {
-  "pages":[
-    
+  "pages": [
     "pages/form/form",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Form表单",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

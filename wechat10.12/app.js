@@ -1,17 +1,16 @@
 //app.js
 App({
-  data:{
-      infotion:[{
-        username:"",
-        sex:"",
-        age:"",
-        hobby:"",
-        phoneNum:"",
-        years:"",
-        localtion:"",
-        introduce:"",
-      }]
-
-  }
-
+  data: {
+    
+  },
+  globalData: {
+      username: "",
+      sex: "",
+      age: "",
+      hobby: "",
+      phoneNum: "",
+      years: "",
+      localtion: "",
+      introduce: ""
+  },
 })
